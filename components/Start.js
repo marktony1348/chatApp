@@ -9,8 +9,8 @@ import {
     TouchableOpacity,
     Pressable,
 } from 'react-native';
-// import BackgroundImage from '../assets/images/BackgroundImage.png';
-// import icon from '../assets/images/icon.png';
+import BackgroundImage from '../assets/BackgroundImage.png';
+import icon from '../assets/usericon.png';
 
 export default class Start extends React.Component {
     constructor(props) {
@@ -33,8 +33,7 @@ export default class Start extends React.Component {
     render() {
       return (
         <View style={styles.container}>
-           <ImageBackground>
-            {/* <ImageBackground src={BackgroundImage} resizeMode='cover' style={styles.backgroundImage}> */}
+            <ImageBackground source={BackgroundImage} resizeMode='cover' style={styles.backgroundImage}>
 
                 <View style={styles.titleBox} >
                     <Text style={styles.title}>ChatApp</Text>
@@ -42,7 +41,7 @@ export default class Start extends React.Component {
 
                 <View style={styles.contentBox}>
                     <View style={styles.inputBox}>
-                        <Image/>
+                        <Image source={icon} style={styles.icon}/>
                         <TextInput
                             style={styles.input}
                             onChangeText={(name) => this.setState({ name })}
@@ -113,7 +112,7 @@ titleBox: {
 title: {
     fontSize: 45,
     fontWeight: "600",
-    color: '#bbb',
+    color: '#FFF',
     justifyContent: 'flex-start',
 },
 
@@ -122,7 +121,7 @@ contentBox: {
     height: '54%',
     width: '88%',
     alignItems:'center',
-    marginLeft: ' 6%',
+    marginLeft: '1%',
     justifyContent: 'space-around',
 },
 
