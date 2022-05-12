@@ -17,7 +17,7 @@
 
 //   render() {
 //     return (
-//       <NavigationContainer>
+//       <NavigationContainer
 //         <Stack.Navigator
 //           initialRouteName='Start'
 //           >
