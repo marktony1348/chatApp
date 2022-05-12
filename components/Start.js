@@ -7,6 +7,7 @@ import {
     StyleSheet,
     Image,
     TouchableOpacity,
+    bgColor,
     Pressable,
 } from 'react-native';
 import BackgroundImage from '../assets/BackgroundImage.png';
