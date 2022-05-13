@@ -6,7 +6,7 @@
   <body>
 
 ### About
-<p>This project was a chat app for mobile devices using React Native. The app
+<p>This project was a chat app for mobile devices using React Native. The app also 
       <br>provides users with a chat interface and options to share images and their
       <br>location.
 
