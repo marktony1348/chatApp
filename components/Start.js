@@ -7,19 +7,23 @@ import {
     StyleSheet,
     Image,
     TouchableOpacity,
-    bgColor,
     Pressable,
+// KeyboardAvoidingView,
 } from 'react-native';
 import BackgroundImage from '../assets/BackgroundImage.png';
 import icon from '../assets/usericon.png';
+// import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
 export default class Start extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { name: '' };
-        bgColor: this.colors.blue
-    }
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      name: "",
+      bgColor: this.colors.blue,
+    };
+  }
+ // function to update the state with the new background color for Chat Screen chosen by the user
     changeBgColor = (newColor) => {
         this.setState({ bgColor: newColor });
     }
@@ -33,6 +37,7 @@ export default class Start extends React.Component {
 
     render() {
       return (
+        // Components to create the color arrays, titles and the app's colors
         <View style={styles.container}>
             <ImageBackground source={BackgroundImage} resizeMode='cover' style={styles.backgroundImage}>
 
@@ -56,6 +61,7 @@ export default class Start extends React.Component {
                         <Text style={styles.chooseColors}>Choose Background Color</Text>
                     </View>
 
+                    {/* All the colors to change the background are here! */}
                     <View style={styles.colorsArray}>
                         <TouchableOpacity
                             style={styles.color1}
@@ -74,7 +80,8 @@ export default class Start extends React.Component {
                             onPress={() => this.changeBgColor(this.colors.green)}>
                         </TouchableOpacity>
                     </View>
-
+                    
+                    {/*This will allow the user to click on a button and be redirected to the chat page */}
                     <Pressable
                         style={styles.button}
                         title='Got to Chat'
@@ -82,7 +89,7 @@ export default class Start extends React.Component {
                             name: this.state.name,
                             bgColor: this.state.bgColor })}>
 
-                        <Text style={styles.buttonTex}>Start Chatting</Text>
+                        <Text style={styles.buttonText}>Start Chatting</Text>
                     </Pressable>
                 </View>
             </ImageBackground>
@@ -161,7 +168,7 @@ chooseColors: {
     fontSize: 16,
     fontWeight: "300",
     color: '#757083',
-    opacity: 1
+    opacity: 1,
 },
 
 colorsArray: {
