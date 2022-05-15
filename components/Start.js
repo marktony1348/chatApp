@@ -8,11 +8,11 @@ import {
     Image,
     TouchableOpacity,
     Pressable,
-// KeyboardAvoidingView,
+    KeyboardAvoidingView,
 } from 'react-native';
 import BackgroundImage from '../assets/BackgroundImage.png';
 import icon from '../assets/usericon.png';
-// import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+// import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 export default class Start extends React.Component {
   constructor(props) {
@@ -93,6 +93,8 @@ export default class Start extends React.Component {
                     </Pressable>
                 </View>
             </ImageBackground>
+            { Platform.OS === 'android' ? <KeyboardAvoidingView behavior="height" /> : null
+        }
         </View>
     )
 }
