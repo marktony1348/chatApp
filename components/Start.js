@@ -8,6 +8,7 @@ import {
     Image,
     TouchableOpacity,
     Pressable,
+    Platform,
     KeyboardAvoidingView,
 } from 'react-native';
 import BackgroundImage from '../assets/BackgroundImage.png';
@@ -29,7 +30,7 @@ export default class Start extends React.Component {
     }
 
     colors = {
-        dark: '#090C08',
+        pink: '#FF1493',
         purple: '#474056',
         blue: '#8A95A5',
         green: '#B9C6AE'
@@ -64,18 +65,34 @@ export default class Start extends React.Component {
                     {/* All the colors to change the background are here! */}
                     <View style={styles.colorsArray}>
                         <TouchableOpacity
+                            accessible={true}
+                            accessibilityLabel='Background color pink'
+                            accessibilityHint='Lets you choose a color for the chat background'
+                            accessibilityRole='button'
                             style={styles.color1}
-                            onPress={() => this.changeBgColor(this.colors.dark)}>
+                            onPress={() => this.changeBgColor(this.colors.pink)}>
                         </TouchableOpacity>
                         <TouchableOpacity
+                            accessible={true}
+                            accessibilityLabel='Background color purple'
+                            accessibilityHint='Lets you choose a color for the chat background'
+                            accessibilityRole='button'
                             style={styles.color2}
                             onPress={() => this.changeBgColor(this.colors.purple)}>
                         </TouchableOpacity>
                         <TouchableOpacity
+                            accessible={true}
+                            accessibilityLabel='Background color blue'
+                            accessibilityHint='Lets you choose a color for the chat background'
+                            accessibilityRole='button'
                             style={styles.color3}
                             onPress={() => this.changeBgColor(this.colors.blue)}>
                         </TouchableOpacity>
                         <TouchableOpacity
+                            accessible={true}
+                            accessibilityLabel='Background color green'
+                            accessibilityHint='Lets you choose a color for the chat background'
+                            accessibilityRole='button'
                             style={styles.color4}
                             onPress={() => this.changeBgColor(this.colors.green)}>
                         </TouchableOpacity>
@@ -181,7 +198,7 @@ colorsArray: {
 },
 
 color1: {
-    backgroundColor: '#090C08',
+    backgroundColor: '#FF1493',
     height: 50,
     width: 50,
     borderRadius: 25
