@@ -110,8 +110,8 @@ export default class Start extends React.Component {
                     </Pressable>
                 </View>
             </ImageBackground>
-            { Platform.OS === 'android' ? <KeyboardAvoidingView behavior="height" /> : null
-        }
+            { Platform.OS === 'android' ? <KeyboardAvoidingView behavior="height" /> : null}
+            {/* { Platform.OS === 'ios' ? <KeyboardAvoidingView behavior="height" /> : null} */}
         </View>
     )
 }
